@@ -1,25 +1,25 @@
+import data from '@/data.json';
+import ProfileCard from '@components/ProfileCard';
+import TimeCard from '@components/TimeCard';
 import { useState } from 'react';
-import ProfileCard from './components/ProfileCard';
-import TimeCard from './components/TimeCard';
-import data from './data.json';
 
 const colorMap: Record<string, string> = {
-  Work: 'bg-[#ff8c66]',
-  Play: 'bg-[#56c2e6]',
-  Study: 'bg-[#ff5c7c]',
-  Exercise: 'bg-[#4acf81]',
-  Social: 'bg-[#7536d3]',
-  'Self Care': 'bg-[#f1c75b]',
+  Work: 'bg-light-red-work',
+  Play: 'bg-soft-blue-play',
+  Study: 'bg-light-red-study',
+  Exercise: 'bg-lime-green-exercise',
+  Social: 'bg-violet-social',
+  'Self Care': 'bg-soft-orange-self',
 };
 
 export default function App() {
   const [timeframe, setTimeframe] = useState<'daily' | 'weekly' | 'monthly'>('weekly');
 
   return (
-    <div className='min-h-screen bg-dark-blue flex items-center justify-center py-16 px-6'>
+    <div className='min-h-screen bg-very-dark-blue flex items-center justify-center py-16 px-6'>
       <div className='w-full max-w-6xl mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          <div className='lg:row-span-2'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start auto-rows-fr'>
+          <div className='lg:row-span-2 flex justify-end h-full'>
             <ProfileCard timeframe={timeframe} setTimeframe={setTimeframe} />
           </div>
 
