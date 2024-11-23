@@ -19,12 +19,12 @@ export default function TimeCard({ title, timeframe, current, previous, color }:
         <img src={`/icon-${title.toLowerCase().replace(' ', '-')}.svg`} alt={title} className='w-[78px] h-[78px]' />
       </header>
 
-      <main className='bg-dark-blue hover:bg-[#34397B] transition-colors rounded-[1rem] p-6 pt-4 relative z-10 h-[120px] sm:h-[200px]'>
+      <main className='bg-dark-blue hover:bg-[#34397B] hover:cursor-pointer transition-colors rounded-[1rem] p-6 pt-4 relative z-10 h-[120px] sm:h-[200px]'>
         <div className='flex flex-col sm:block'>
           <div className='flex justify-between items-center mb-[18px] sm:mb-6'>
             <h2 className='text-white font-medium text-lg'>{title}</h2>
-            <button className='text-pale-blue hover:text-white transition-colors p-1' aria-label='More options'>
-              <img src='/icon-ellipsis.svg' alt='elipsis' className='w-5 h-1' />
+            <button className='text-pale-blue hover:text-white transition-colors p-1 cursor-pointer' aria-label='More options'>
+              <img src='/icon-ellipsis.svg' alt='elipsis' className='w-6 h-1.5' />
             </button>
           </div>
 

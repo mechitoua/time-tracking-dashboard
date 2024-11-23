@@ -17,10 +17,12 @@ export default function App() {
 
   return (
     <div className='min-h-screen bg-very-dark-blue flex items-center justify-center py-6 sm:py-16 px-6'>
-      <div className='w-full max-w-[375px] sm:max-w-6xl mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
-          <div className='lg:row-span-2 flex justify-center lg:justify-end h-full'>
-            <ProfileCard timeframe={timeframe} setTimeframe={setTimeframe} />
+      <div className='w-full max-w-[375px] sm:max-w-[600px] lg:max-w-6xl mx-auto'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
+          <div className='sm:col-span-2 lg:col-span-1 lg:row-span-2 flex justify-center lg:justify-end'>
+            <div className='w-full lg:w-auto'>
+              <ProfileCard timeframe={timeframe} setTimeframe={setTimeframe} />
+            </div>
           </div>
 
           {data.map((item) => (
