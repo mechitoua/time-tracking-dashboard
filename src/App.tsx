@@ -16,8 +16,8 @@ export default function App() {
   const [timeframe, setTimeframe] = useState<'daily' | 'weekly' | 'monthly'>('weekly');
 
   return (
-    <div className='min-h-screen bg-dark-blue py-16 px-6'>
-      <div className='max-w-6xl mx-auto'>
+    <div className='min-h-screen bg-dark-blue flex items-center justify-center py-16 px-6'>
+      <div className='w-full max-w-6xl mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           <div className='lg:row-span-2'>
             <ProfileCard timeframe={timeframe} setTimeframe={setTimeframe} />
