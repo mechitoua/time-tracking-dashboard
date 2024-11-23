@@ -19,10 +19,10 @@ A sophisticated time tracking dashboard built with React and TypeScript, designe
 
 - **Frontend Framework:** React 18
 - **Language:** TypeScript
-- **Styling:** CSS Modules
+- **Styling:** Tailwind CSS
 - **Build Tool:** Vite
 - **Font:** Rubik (Google Fonts)
-- **Version Control:** Git
+- **Version Control:** Git with gitmoji
 
 ## Project Structure
 
@@ -30,17 +30,42 @@ A sophisticated time tracking dashboard built with React and TypeScript, designe
 project/
 ├── public/
 │   ├── desktop-preview.jpg
+│   ├── image-jeremy.png
 │   └── favicon-32x32.png
 ├── src/
 │   ├── components/
-│   │   └── TimeCard.tsx      # Time tracking card component
-│   ├── styles/               # CSS modules and global styles
-│   ├── types/                # TypeScript type definitions
-│   ├── App.tsx              # Main application component
-│   └── main.tsx             # Application entry point
+│   │   ├── TimeCard.tsx     # Time tracking card component
+│   │   └── ProfileCard.tsx  # User profile and timeframe selection
+│   ├── types/               # TypeScript type definitions
+│   ├── App.tsx             # Main application component
+│   └── main.tsx            # Application entry point
 ├── index.html
+├── tailwind.config.js      # Tailwind configuration
 └── package.json
 ```
+
+## Design System
+
+### Breakpoints
+
+- **Mobile:** < 640px
+- **Tablet:** 640px - 1024px
+- **Desktop:** > 1024px
+
+### Components
+
+#### ProfileCard
+
+- User information display
+- Timeframe selection (daily/weekly/monthly)
+- Responsive layout adapting to different viewports
+
+#### TimeCard
+
+- Activity time tracking
+- Previous period comparison
+- Dynamic background colors
+- Hover interactions
 
 ## Getting Started
 
@@ -53,12 +78,14 @@ project/
 ### Installation
 
 1. Clone the repository
+
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/mechitoua/time-tracking-dashboard.git]
    cd time-tracking-dashboard
    ```
 
 2. Install dependencies
+
    ```bash
    npm install
    # or
@@ -66,6 +93,7 @@ project/
    ```
 
 3. Start the development server
+
    ```bash
    npm run dev
    # or
@@ -82,6 +110,7 @@ project/
 ## Usage
 
 The dashboard provides an intuitive interface for:
+
 - Viewing time spent on different activities
 - Switching between daily, weekly, and monthly views
 - Analyzing time allocation patterns
@@ -118,6 +147,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Design inspiration from Frontend Mentor
+- Design from Frontend Mentor
 - Rubik font family by Google Fonts
 - React community for excellent tools and resources
